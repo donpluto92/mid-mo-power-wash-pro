@@ -7,40 +7,159 @@
     <meta name="description" content="Learn pressure washer nozzle basics, surface cleaner use, detergents, soft washing setup, and exterior cleaning gear for Mid-Missouri homeowners.">
     <link rel="stylesheet" href="assets/styles.css">
     <style>
+      .site-header {
+        position: relative !important;
+        top: auto !important;
+      }
+
       .nozzle-photo {
         position: relative;
-        aspect-ratio: 5 / 1;
+        display: block;
+        height: 210px;
         margin: 0 0 18px;
         overflow: hidden;
         border: 1px solid var(--line);
         border-radius: 8px;
-        background-color: #fff;
-        background-image: url("https://m.media-amazon.com/images/I/61jrSXTSvHL._US500_.jpg");
-        background-repeat: no-repeat;
-        background-size: 100% auto;
-        background-position-x: center;
+        background: linear-gradient(180deg, #fff 0%, var(--tip-bg, #f5fbff) 100%);
+      }
+
+      .nozzle-photo::before {
+        content: "";
+        position: absolute;
+        inset: 0 auto 0 0;
+        z-index: 2;
+        width: 6px;
+        background: var(--tip-color, #1479bd);
+      }
+
+      .nozzle-photo img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 360px;
+        height: 360px;
+        max-width: none;
+        transform: translate(calc(-50% + var(--tip-x, 0px)), calc(-50% + var(--tip-y, 0px)));
       }
 
       .nozzle-photo span {
         position: absolute;
         left: 12px;
         bottom: 12px;
+        z-index: 3;
         display: inline-flex;
         min-height: 30px;
         align-items: center;
         padding: 5px 10px;
         border-radius: 8px;
         color: #fff;
-        background: rgba(11, 56, 86, 0.9);
+        background: rgba(11, 56, 86, 0.92);
         font-size: 0.82rem;
         font-weight: 900;
       }
 
-      .nozzle-photo-red { background-position-y: 0%; }
-      .nozzle-photo-yellow { background-position-y: 25%; }
-      .nozzle-photo-green { background-position-y: 50%; }
-      .nozzle-photo-white { background-position-y: 75%; }
-      .nozzle-photo-black { background-position-y: 100%; }
+      .nozzle-photo-red { --tip-color: #d92020; --tip-bg: #fff5f5; --tip-x: 118px; --tip-y: 112px; }
+      .nozzle-photo-yellow { --tip-color: #f2c230; --tip-bg: #fffbed; --tip-x: -118px; --tip-y: 112px; }
+      .nozzle-photo-green { --tip-color: #2e9d58; --tip-bg: #f2fff7; --tip-x: 115px; --tip-y: -112px; }
+      .nozzle-photo-white { --tip-color: #c8d7e2; --tip-bg: #f7fbff; --tip-x: -122px; --tip-y: -112px; }
+      .nozzle-photo-black { --tip-color: #111827; --tip-bg: #f5f7fa; --tip-x: 0px; --tip-y: 4px; }
+
+      .nozzle-note {
+        margin-top: 10px;
+        font-size: 0.92rem;
+        color: var(--muted);
+      }
+
+      @media (max-width: 640px) {
+        html,
+        body {
+          max-width: 100%;
+          overflow-x: hidden;
+        }
+
+        .site-header {
+          gap: 10px;
+          justify-content: flex-start;
+          padding: 12px 14px;
+        }
+
+        .brand {
+          flex: 0 1 auto;
+          min-width: 0;
+          gap: 10px;
+        }
+
+        .brand span:last-child {
+          min-width: 0;
+        }
+
+        .brand strong {
+          font-size: 0.98rem;
+          overflow-wrap: anywhere;
+        }
+
+        .brand small {
+          display: none;
+        }
+
+        .nav-toggle {
+          display: inline-flex;
+          flex: 0 0 auto;
+          padding: 8px 10px;
+        }
+
+        .page-hero,
+        .content-band,
+        .split-section,
+        .sponsor-band,
+        .cta-strip,
+        .lead-section,
+        .site-footer {
+          width: min(340px, calc(100vw - 36px)) !important;
+          max-width: 340px;
+          margin-left: 18px;
+          margin-right: 18px;
+        }
+
+        h1 {
+          max-width: 340px;
+          font-size: 2.2rem;
+          line-height: 1.02;
+          overflow-wrap: break-word;
+        }
+
+        .page-hero p,
+        .section-heading p {
+          max-width: 340px;
+          font-size: 1rem;
+          overflow-wrap: break-word;
+        }
+
+        .card-grid.two {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 420px) {
+        .site-header {
+          padding: 10px 12px;
+        }
+
+        .nav-toggle {
+          min-width: 48px;
+          justify-content: center;
+          font-size: 0.82rem;
+        }
+
+        .nozzle-photo {
+          height: 188px;
+        }
+
+        .nozzle-photo img {
+          width: 330px;
+          height: 330px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -69,29 +188,34 @@
         </div>
         <div class="card-grid two">
           <article class="info-card">
-            <div class="nozzle-photo nozzle-photo-red" role="img" aria-label="Photo of a red 0 degree pressure washer nozzle tip"><span>0 deg</span></div>
+            <div class="nozzle-photo nozzle-photo-red" role="img" aria-label="Photo of a red 0 degree pressure washer nozzle tip"><img src="https://m.media-amazon.com/images/I/61jrSXTSvHL._US500_.jpg" alt=""><span>0 deg</span></div>
             <h3>Red 0 degree tip</h3>
             <p>The 0 means a zero-degree spray: a straight pencil jet. Skip it for routine house washing, deck cleaning, and homeowner concrete work unless you fully understand the risk.</p>
+            <p class="nozzle-note">Common stamp example: 00030 means 0 degree spray, 3.0 orifice.</p>
           </article>
           <article class="info-card">
-            <div class="nozzle-photo nozzle-photo-yellow" role="img" aria-label="Photo of a yellow 15 degree pressure washer nozzle tip"><span>15 deg</span></div>
+            <div class="nozzle-photo nozzle-photo-yellow" role="img" aria-label="Photo of a yellow 15 degree pressure washer nozzle tip"><img src="https://m.media-amazon.com/images/I/61jrSXTSvHL._US500_.jpg" alt=""><span>15 deg</span></div>
             <h3>Yellow 15 degree tip</h3>
             <p>The 15 means a narrow 15-degree fan. It is still aggressive, so keep it moving and test before using it across a large concrete area.</p>
+            <p class="nozzle-note">Common stamp example: 15030 means 15 degree spray, 3.0 orifice.</p>
           </article>
           <article class="info-card">
-            <div class="nozzle-photo nozzle-photo-green" role="img" aria-label="Photo of a green 25 degree pressure washer nozzle tip"><span>25 deg</span></div>
+            <div class="nozzle-photo nozzle-photo-green" role="img" aria-label="Photo of a green 25 degree pressure washer nozzle tip"><img src="https://m.media-amazon.com/images/I/61jrSXTSvHL._US500_.jpg" alt=""><span>25 deg</span></div>
             <h3>Green 25 degree tip</h3>
             <p>The 25 means a medium 25-degree fan. It is a common driveway cleaning and patio tip when the surface is sound and you need more bite than a rinse.</p>
+            <p class="nozzle-note">Common stamp example: 25030 means 25 degree spray, 3.0 orifice.</p>
           </article>
           <article class="info-card">
-            <div class="nozzle-photo nozzle-photo-white" role="img" aria-label="Photo of a white 40 degree pressure washer nozzle tip"><span>40 deg</span></div>
+            <div class="nozzle-photo nozzle-photo-white" role="img" aria-label="Photo of a white 40 degree pressure washer nozzle tip"><img src="https://m.media-amazon.com/images/I/61jrSXTSvHL._US500_.jpg" alt=""><span>40 deg</span></div>
             <h3>White 40 degree tip</h3>
             <p>The 40 means a wider 40-degree fan. Use it for siding rinses, decks, fences, painted surfaces, and safer first passes.</p>
+            <p class="nozzle-note">Common stamp example: 40030 means 40 degree spray, 3.0 orifice.</p>
           </article>
           <article class="info-card">
-            <div class="nozzle-photo nozzle-photo-black" role="img" aria-label="Photo of a black soap pressure washer nozzle tip"><span>Soap</span></div>
+            <div class="nozzle-photo nozzle-photo-black" role="img" aria-label="Photo of a black soap pressure washer nozzle tip"><img src="https://m.media-amazon.com/images/I/61jrSXTSvHL._US500_.jpg" alt=""><span>Soap</span></div>
             <h3>Black soap nozzle</h3>
             <p>Black is the low-pressure soap nozzle, often marked soap or 65. Use it to apply detergent, let the cleaner dwell, then rinse with the right fan tip.</p>
+            <p class="nozzle-note">Common stamp example: 65030 means wide low-pressure soap application, 3.0 orifice.</p>
           </article>
           <article class="info-card">
             <span class="card-icon surface"></span>
