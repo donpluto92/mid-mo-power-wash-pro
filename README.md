@@ -1,15 +1,15 @@
 # Mid-Mo Power Wash Pro
 
-Educational pressure washing website brought to you by G&S Exterior Restoration.
+Local exterior cleaning education for Mid-Missouri homeowners, powered by G&S Exterior Restoration.
 
 ## Pages
 
-- `index.html` - home page and main lead funnel
-- `psi-guide.html` - surface PSI ranges and searchable table
+- `index.html` - home page and main education hub
+- `psi-guide.html` - surface PSI ranges and searchable guidance table
 - `tools.html` - nozzles, attachments, and starter gear
-- `projects.html` - common homeowner project workflows
+- `projects.html` - common Mid-Missouri exterior cleaning project workflows
 - `safety.html` - safety and damage-prevention guidance
-- `when-to-call-a-pro.html` - decision page that sends leads to `https://gsrestoration.net/`
+- `when-to-call-a-pro.html` - decision page that points homeowners to `https://gsrestoration.net/`
 
 ## Editing
 
