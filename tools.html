@@ -36,8 +36,8 @@
         position: absolute;
         left: 50%;
         top: 50%;
-        width: 820px;
-        height: 820px;
+        width: 720px;
+        height: 720px;
         max-width: none;
         transform: translate(calc(-50% + var(--tip-x, 0px)), calc(-50% + var(--tip-y, 0px)));
       }
@@ -58,11 +58,40 @@
         font-weight: 900;
       }
 
-      .nozzle-photo-red { --tip-color: #d92020; --tip-bg: #fff5f5; --tip-x: 269px; --tip-y: 255px; }
-      .nozzle-photo-yellow { --tip-color: #f2c230; --tip-bg: #fffbed; --tip-x: -269px; --tip-y: 255px; }
-      .nozzle-photo-green { --tip-color: #2e9d58; --tip-bg: #f2fff7; --tip-x: 262px; --tip-y: -255px; }
-      .nozzle-photo-white { --tip-color: #c8d7e2; --tip-bg: #f7fbff; --tip-x: -278px; --tip-y: -255px; }
-      .nozzle-photo-black { --tip-color: #111827; --tip-bg: #f5f7fa; --tip-x: 0px; --tip-y: 9px; }
+      .nozzle-photo-red { --tip-color: #d92020; --tip-bg: #fff5f5; --tip-x: 236px; --tip-y: 224px; }
+      .nozzle-photo-yellow { --tip-color: #f2c230; --tip-bg: #fffbed; --tip-x: -236px; --tip-y: 224px; }
+      .nozzle-photo-green { --tip-color: #2e9d58; --tip-bg: #f2fff7; --tip-x: 230px; --tip-y: -224px; }
+      .nozzle-photo-white { --tip-color: #c8d7e2; --tip-bg: #f7fbff; --tip-x: -244px; --tip-y: -224px; }
+      .nozzle-photo-black { --tip-color: #111827; --tip-bg: #f5f7fa; --tip-x: 0px; --tip-y: 8px; }
+
+      .nozzle-photo::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      .nozzle-photo-red::after,
+      .nozzle-photo-green::after {
+        right: 0;
+        width: 92px;
+        background: linear-gradient(90deg, transparent 0%, var(--tip-bg) 38%);
+      }
+
+      .nozzle-photo-yellow::after,
+      .nozzle-photo-white::after {
+        left: 0;
+        width: 92px;
+        background: linear-gradient(270deg, transparent 0%, var(--tip-bg) 38%);
+      }
+
+      .nozzle-photo-black::after {
+        left: 0;
+        right: 0;
+        background: linear-gradient(90deg, var(--tip-bg) 0 13%, transparent 23% 77%, var(--tip-bg) 87% 100%);
+      }
 
       .nozzle-note {
         margin-top: 10px;
