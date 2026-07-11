@@ -34,3 +34,8 @@ h1,h2{color:var(--navy);font-family:Georgia,"Times New Roman",serif}h1{letter-sp
 .brand-logo,.brand-mark{width:66px!important;height:54px!important;filter:drop-shadow(0 6px 12px rgba(6,31,51,.12))!important}
 @media(max-width:980px){.site-nav{top:70px;background:#fff;border-color:var(--line)}.site-nav a{color:#476172}}
 @media(max-width:640px){.brand-logo,.brand-mark{width:54px!important;height:44px!important}.site-header{min-height:62px}.site-nav{top:62px}}
+
+/* Stronger brand presence */
+.site-header{min-height:88px}.site-header .brand-logo,.site-header .brand-mark{width:94px!important;height:74px!important}.site-footer>div{display:grid;grid-template-columns:112px minmax(0,1fr);column-gap:18px;align-items:center;max-width:650px}.site-footer .brand-logo{grid-row:1/3;width:112px!important;height:90px!important;filter:drop-shadow(0 8px 16px rgba(0,0,0,.24))!important}.site-footer strong{align-self:end;font-size:1.08rem}.site-footer p{align-self:start}
+@media(max-width:980px){.site-nav{top:86px}}
+@media(max-width:640px){.site-header{min-height:70px}.site-header .brand-logo,.site-header .brand-mark{width:72px!important;height:56px!important}.site-nav{top:70px}.site-footer>div{grid-template-columns:86px minmax(0,1fr);column-gap:14px}.site-footer .brand-logo{width:86px!important;height:70px!important}}
