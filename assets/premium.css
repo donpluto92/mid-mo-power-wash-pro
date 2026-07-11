@@ -46,3 +46,7 @@ h1,h2{color:var(--navy);font-family:Georgia,"Times New Roman",serif}h1{letter-sp
 
 /* Light footer for stronger logo contrast */
 .site-footer{color:#526977;background:#e9eef1;border-top:3px solid var(--gold);box-shadow:inset 0 1px 0 rgba(255,255,255,.8)}.site-footer strong{color:var(--navy)}.site-footer p{color:#526977}.site-footer a{color:#086da5}.site-footer a:hover{color:var(--navy)}.site-footer .brand-logo{filter:drop-shadow(0 6px 12px rgba(6,31,51,.13))!important}
+
+/* Pressure and power washing explainer */
+.process-explainer{padding-bottom:clamp(30px,4vw,48px)}.process-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.process-grid article{padding:22px;border:1px solid rgba(9,93,138,.18);border-radius:10px;background:#fff;box-shadow:0 14px 34px rgba(6,31,51,.08)}.process-grid .process-choice{background:linear-gradient(135deg,#f1f9ff,#f1fbf7)}.process-mark{display:inline-flex;margin-bottom:14px;padding:5px 9px;border-radius:999px;color:#fff;background:var(--blue);font-size:.73rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}.process-mark.heated{color:#694400;background:var(--gold-soft)}.process-mark.method{background:var(--green)}.process-grid p{color:var(--muted)}
+@media(max-width:900px){.process-grid{grid-template-columns:1fr}}
