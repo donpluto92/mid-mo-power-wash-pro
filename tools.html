@@ -99,6 +99,16 @@
         color: var(--muted);
       }
 
+      .tool-photo {
+        display: block;
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        margin-bottom: 18px;
+        border-radius: 8px;
+        object-fit: cover;
+        object-position: center;
+      }
+
       @media (max-width: 640px) {
         html,
         body {
@@ -242,7 +252,7 @@
             <p class="nozzle-note">Common stamp example: 65030 means wide low-pressure soap application, 3.0 orifice.</p>
           </article>
           <article class="info-card">
-            <span class="card-icon surface"></span>
+            <img class="tool-photo" src="assets/surface-cleaner.webp" alt="Stainless steel pressure washer surface cleaner washing a concrete driveway" width="1200" height="900" loading="lazy">
             <h3>Surface cleaner</h3>
             <p>A flatwork attachment for driveways and sidewalks. It helps keep concrete cleaning even and reduces wand marks.</p>
           </article>
