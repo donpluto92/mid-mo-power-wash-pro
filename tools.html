@@ -45,10 +45,11 @@
         position: absolute;
         left: 50%;
         top: 50%;
-        width: 680px;
-        height: 680px;
+        width: 420px;
+        height: 420px;
         max-width: none;
         transform: translate(calc(-50% + var(--tip-x, 0px)), calc(-50% + var(--tip-y, 0px)));
+        clip-path: var(--tip-crop);
       }
 
       .nozzle-photo span {
@@ -67,39 +68,14 @@
         font-weight: 900;
       }
 
-      .nozzle-photo-red { --tip-color: #d92020; --tip-bg: #fff5f5; --tip-x: 223px; --tip-y: 212px; }
-      .nozzle-photo-yellow { --tip-color: #f2c230; --tip-bg: #fffbed; --tip-x: -223px; --tip-y: 212px; }
-      .nozzle-photo-green { --tip-color: #2e9d58; --tip-bg: #f2fff7; --tip-x: 217px; --tip-y: -212px; }
-      .nozzle-photo-white { --tip-color: #c8d7e2; --tip-bg: #f7fbff; --tip-x: -230px; --tip-y: -212px; }
-      .nozzle-photo-black { --tip-color: #111827; --tip-bg: #f5f7fa; --tip-x: 0px; --tip-y: 8px; }
+      .nozzle-photo-red { --tip-color: #d92020; --tip-bg: #fff5f5; --tip-x: 31.5%; --tip-y: 30%; --tip-crop: inset(0 63% 58% 0); }
+      .nozzle-photo-yellow { --tip-color: #f2c230; --tip-bg: #fffbed; --tip-x: -31.5%; --tip-y: 30%; --tip-crop: inset(0 0 58% 63%); }
+      .nozzle-photo-green { --tip-color: #2e9d58; --tip-bg: #f2fff7; --tip-x: 31.5%; --tip-y: -30%; --tip-crop: inset(58% 63% 0 0); }
+      .nozzle-photo-white { --tip-color: #c8d7e2; --tip-bg: #f7fbff; --tip-x: -31.5%; --tip-y: -30%; --tip-crop: inset(58% 0 0 63%); }
+      .nozzle-photo-black { --tip-color: #111827; --tip-bg: #f5f7fa; --tip-x: 0%; --tip-y: -1%; --tip-crop: inset(22% 29% 18% 29%); }
 
       .nozzle-photo::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        z-index: 1;
-        pointer-events: none;
-      }
-
-      .nozzle-photo-red::after,
-      .nozzle-photo-green::after {
-        right: 0;
-        width: 140px;
-        background: linear-gradient(90deg, transparent 0%, #fff 10%);
-      }
-
-      .nozzle-photo-yellow::after,
-      .nozzle-photo-white::after {
-        left: 0;
-        width: 140px;
-        background: linear-gradient(270deg, transparent 0%, #fff 10%);
-      }
-
-      .nozzle-photo-black::after {
-        left: 0;
-        right: 0;
-        background: linear-gradient(90deg, var(--tip-bg) 0 13%, transparent 23% 77%, var(--tip-bg) 87% 100%);
+        display: none;
       }
 
       .nozzle-note {
@@ -110,9 +86,10 @@
 
       .tool-photo {
         display: block;
-        width: min(64%, 320px);
-        aspect-ratio: 4 / 3;
-        margin: 0 auto 18px;
+        width: 100%;
+        height: 210px;
+        margin: 0 0 18px;
+        border: 1px solid var(--line);
         border-radius: 8px;
         object-fit: cover;
         object-position: center;
@@ -203,8 +180,14 @@
           height: 188px;
         }
 
+        .nozzle-photo img {
+          width: 340px;
+          height: 340px;
+        }
+
         .tool-photo {
-          width: min(78%, 250px);
+          width: 100%;
+          height: 188px;
         }
       }
     </style>
