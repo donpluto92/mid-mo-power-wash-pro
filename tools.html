@@ -42,14 +42,11 @@
       }
 
       .nozzle-photo img {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        width: 420px;
-        height: 420px;
-        max-width: none;
-        transform: translate(calc(-50% + var(--tip-x, 0px)), calc(-50% + var(--tip-y, 0px)));
-        clip-path: var(--tip-crop);
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 8px 14px;
+        object-fit: contain;
       }
 
       .nozzle-photo span {
@@ -68,15 +65,11 @@
         font-weight: 900;
       }
 
-      .nozzle-photo-red { --tip-color: #d92020; --tip-bg: #fff5f5; --tip-x: 31.5%; --tip-y: 30%; --tip-crop: inset(0 63% 58% 0); }
-      .nozzle-photo-yellow { --tip-color: #f2c230; --tip-bg: #fffbed; --tip-x: -31.5%; --tip-y: 30%; --tip-crop: inset(0 0 58% 63%); }
-      .nozzle-photo-green { --tip-color: #2e9d58; --tip-bg: #f2fff7; --tip-x: 31.5%; --tip-y: -30%; --tip-crop: inset(58% 63% 0 0); }
-      .nozzle-photo-white { --tip-color: #c8d7e2; --tip-bg: #f7fbff; --tip-x: -31.5%; --tip-y: -30%; --tip-crop: inset(58% 0 0 63%); }
-      .nozzle-photo-black { --tip-color: #111827; --tip-bg: #f5f7fa; --tip-x: 0%; --tip-y: -1%; --tip-crop: inset(22% 29% 18% 29%); }
-
-      .nozzle-photo::after {
-        display: none;
-      }
+      .nozzle-photo-red { --tip-color: #d92020; --tip-bg: #fff5f5; }
+      .nozzle-photo-yellow { --tip-color: #f2c230; --tip-bg: #fffbed; }
+      .nozzle-photo-green { --tip-color: #2e9d58; --tip-bg: #f2fff7; }
+      .nozzle-photo-white { --tip-color: #c8d7e2; --tip-bg: #f7fbff; }
+      .nozzle-photo-black { --tip-color: #111827; --tip-bg: #f5f7fa; }
 
       .nozzle-note {
         margin-top: 10px;
@@ -180,11 +173,6 @@
           height: 188px;
         }
 
-        .nozzle-photo img {
-          width: 340px;
-          height: 340px;
-        }
-
         .tool-photo {
           width: 100%;
           height: 188px;
@@ -218,31 +206,31 @@
         </div>
         <div class="card-grid two">
           <article class="info-card">
-            <div class="nozzle-photo nozzle-photo-red" role="img" aria-label="Photo of a red 0 degree pressure washer nozzle tip"><img src="https://m.media-amazon.com/images/I/61jrSXTSvHL._US500_.jpg" alt=""><span>0 deg</span></div>
+            <div class="nozzle-photo nozzle-photo-red"><img src="assets/nozzles/red-0-degree.webp" alt="Red 0-degree pressure washer nozzle with a round pinhole outlet" width="600" height="600" loading="lazy"><span>0 deg</span></div>
             <h3>Red 0 degree tip</h3>
             <p>The 0 means a zero-degree spray: a straight pencil jet. Skip it for routine house washing, deck cleaning, and homeowner concrete work unless you fully understand the risk.</p>
             <p class="nozzle-note">Common stamp example: 00030 means 0 degree spray, 3.0 orifice.</p>
           </article>
           <article class="info-card">
-            <div class="nozzle-photo nozzle-photo-yellow" role="img" aria-label="Photo of a yellow 15 degree pressure washer nozzle tip"><img src="https://m.media-amazon.com/images/I/61jrSXTSvHL._US500_.jpg" alt=""><span>15 deg</span></div>
+            <div class="nozzle-photo nozzle-photo-yellow"><img src="assets/nozzles/yellow-15-degree.webp" alt="Yellow 15-degree pressure washer fan nozzle" width="600" height="600" loading="lazy"><span>15 deg</span></div>
             <h3>Yellow 15 degree tip</h3>
             <p>The 15 means a narrow 15-degree fan. It is still aggressive, so keep it moving and test before using it across a large concrete area.</p>
             <p class="nozzle-note">Common stamp example: 15030 means 15 degree spray, 3.0 orifice.</p>
           </article>
           <article class="info-card">
-            <div class="nozzle-photo nozzle-photo-green" role="img" aria-label="Photo of a green 25 degree pressure washer nozzle tip"><img src="https://m.media-amazon.com/images/I/61jrSXTSvHL._US500_.jpg" alt=""><span>25 deg</span></div>
+            <div class="nozzle-photo nozzle-photo-green"><img src="assets/nozzles/green-25-degree.webp" alt="Green 25-degree pressure washer fan nozzle" width="600" height="600" loading="lazy"><span>25 deg</span></div>
             <h3>Green 25 degree tip</h3>
             <p>The 25 means a medium 25-degree fan. It is a common driveway cleaning and patio tip when the surface is sound and you need more bite than a rinse.</p>
             <p class="nozzle-note">Common stamp example: 25030 means 25 degree spray, 3.0 orifice.</p>
           </article>
           <article class="info-card">
-            <div class="nozzle-photo nozzle-photo-white" role="img" aria-label="Photo of a white 40 degree pressure washer nozzle tip"><img src="https://m.media-amazon.com/images/I/61jrSXTSvHL._US500_.jpg" alt=""><span>40 deg</span></div>
+            <div class="nozzle-photo nozzle-photo-white"><img src="assets/nozzles/white-40-degree.webp" alt="White 40-degree pressure washer fan nozzle" width="600" height="600" loading="lazy"><span>40 deg</span></div>
             <h3>White 40 degree tip</h3>
             <p>The 40 means a wider 40-degree fan. Use it for siding rinses, decks, fences, painted surfaces, and safer first passes.</p>
             <p class="nozzle-note">Common stamp example: 40030 means 40 degree spray, 3.0 orifice.</p>
           </article>
           <article class="info-card">
-            <div class="nozzle-photo nozzle-photo-black" role="img" aria-label="Photo of a black soap pressure washer nozzle tip"><img src="https://m.media-amazon.com/images/I/61jrSXTSvHL._US500_.jpg" alt=""><span>Soap</span></div>
+            <div class="nozzle-photo nozzle-photo-black"><img src="assets/nozzles/black-soap.webp" alt="Black low-pressure soap nozzle with a larger round outlet" width="600" height="600" loading="lazy"><span>Soap</span></div>
             <h3>Black soap nozzle</h3>
             <p>Black is the low-pressure soap nozzle, often marked soap or 65. Use it to apply detergent, let the cleaner dwell, then rinse with the right fan tip.</p>
             <p class="nozzle-note">Common stamp example: 65030 means wide low-pressure soap application, 3.0 orifice.</p>
